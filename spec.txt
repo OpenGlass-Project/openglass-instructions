@@ -1,0 +1,17 @@
+00 POK value:byte location:ptr
+01 LON
+02 DEL time:long
+03 LOF
+04 JMP location:ptr
+05 ADB location:ptr value:byte
+06 ADI location:ptr value:int
+07 ADL location:ptr value:long
+08 JEB target:ptr check:ptr value:byte
+09 JLB target:ptr check:ptr value:byte
+0A JGB target:ptr check:ptr value:byte
+0B JEI target:ptr check:ptr value:int
+0C JLI target:ptr check:ptr value:int
+0D JGI target:ptr check:ptr value:int
+0E SCW x:byte y:byte
+0F SCB x:byte y:byte
+10 HLT
