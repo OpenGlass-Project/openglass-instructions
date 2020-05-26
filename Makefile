@@ -1,5 +1,5 @@
 build:
-	rm dist/*
+	rm -f dist/*
 	python3 setup.py sdist
 
 upload: build
