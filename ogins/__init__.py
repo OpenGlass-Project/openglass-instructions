@@ -111,6 +111,14 @@ SCF = Instruction(
         ]
     )
 
+SBB = Instruction(
+        'SBB',
+        0x12,
+        [
+            Argument('location', PTR),
+            Argument('value', BYTE),
+        ]
+    )
 instructions = {
         0x00: POK,
         0x01: LON,

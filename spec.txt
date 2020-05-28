@@ -15,3 +15,5 @@
 0E SCW x:byte y:byte
 0F SCB x:byte y:byte
 10 HLT
+11 SCF
+05 SBB location:ptr value:byte
