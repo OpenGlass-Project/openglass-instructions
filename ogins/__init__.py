@@ -131,4 +131,5 @@ instructions = {
         0x0F: SCB,
         0x10: HLT,
         0x11: SCF,
+        0x12: SBB,
 }
