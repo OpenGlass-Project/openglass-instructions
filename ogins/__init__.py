@@ -69,6 +69,24 @@ ADB = Instruction(
         ]
     )
 
+ADI = Instruction(
+        'ADI',
+        0x06,
+        [
+            Argument('location', PTR),
+            Argument('value', INT),
+        ]
+    )
+
+ADL = Instruction(
+        'ADL',
+        0x07,
+        [
+            Argument('location', PTR),
+            Argument('value', LONG),
+        ]
+    )
+
 JEB = Instruction(
         'JEB',
         0x08,
@@ -76,6 +94,56 @@ JEB = Instruction(
             Argument('target', PTR),
             Argument('check', PTR),
             Argument('value', BYTE),
+        ]
+    )
+
+JLB = Instruction(
+        'JLB',
+        0x09,
+        [
+            Argument('target', PTR),
+            Argument('check', PTR),
+            Argument('value', BYTE),
+        ]
+    )
+
+JGB = Instruction(
+        'JGB',
+        0x0A,
+        [
+            Argument('target', PTR),
+            Argument('check', PTR),
+            Argument('value', BYTE),
+        ]
+    )
+
+JEI = Instruction(
+        'JEI',
+        0x0B,
+        [
+            Argument('target', PTR),
+            Argument('check', PTR),
+            Argument('value', INT),
+        ]
+    )
+
+JLI = Instruction(
+        'JLI',
+        0x0C,
+        [
+            Argument('target', PTR),
+            Argument('check', PTR),
+            Argument('value', INT),
+        ]
+    )
+
+JGI = Instruction(
+        'JGI',
+        0x0D,
+        [
+            Argument('target', PTR),
+            Argument('check', PTR),
+            Argument('value', INT),
         ]
     )
 
@@ -119,6 +187,15 @@ SBB = Instruction(
             Argument('value', BYTE),
         ]
     )
+
+GBD = Instruction(
+        'GBD',
+        0x13,
+        [
+            Argument('button', BYTE),
+            Argument('location', PTR),
+        ]
+    )
 instructions = {
         0x00: POK,
         0x01: LON,
@@ -126,10 +203,18 @@ instructions = {
         0x03: LOF,
         0x04: JMP,
         0x05: ADB,
+        0x06: ADI,
+        0x07: ADL,
         0x08: JEB,
+        0x09: JLB,
+        0x0A: JGB,
+        0x0B: JEI,
+        0x0C: JLI,
+        0x0D: JGI,
         0x0E: SCW,
         0x0F: SCB,
         0x10: HLT,
         0x11: SCF,
         0x12: SBB,
+        0x13: GBD,
 }

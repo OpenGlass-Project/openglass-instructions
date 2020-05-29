@@ -16,4 +16,5 @@
 0F SCB x:byte y:byte
 10 HLT
 11 SCF
-05 SBB location:ptr value:byte
+12 SBB location:ptr value:byte
+13 GBD button:byte location:ptr
